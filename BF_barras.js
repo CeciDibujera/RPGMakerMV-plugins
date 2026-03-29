@@ -281,8 +281,9 @@ Sprite_DamageBar.shouldHaveBar = (target) => {
 
 Sprite_DamageBar.prototype.setup = function(target) {
     var result = target.result();
-    console.log(target)
-    console.log(result)
+    //Estos console.log pueden servir para más adelante pero los quito que estorban en la consola
+    //console.log(target)
+    //console.log(result)
 
     // creamos la ventana para dibujar la barra de vida
     this._window = new Window_Base(0, 0, Graphics.boxWidth, Graphics.boxHeight);
