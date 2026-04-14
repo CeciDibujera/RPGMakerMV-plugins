@@ -1,7 +1,7 @@
 //=============================================================================
 //BF_transicion.js
 //=============================================================================
-/*
+/*:
 @author FriKitty / CeciDibujera
 @plugindesc Use images for transitions v1.0
 @filename BF_transicion.js
