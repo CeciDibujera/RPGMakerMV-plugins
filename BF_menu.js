@@ -3,7 +3,7 @@
 //=============================================================================
 /*:
 @author FriKitty / CeciDibujera
-@plugindesc Personalized menu for BF project. v1.0
+@plugindesc Personalized menu for BF project. v1.1
 @filename BF_menu.js
 
 @param dineroIcon
@@ -179,7 +179,7 @@
 @desc Choose the icon to the left of OFF (0 for transparent)
 
 ------------------------------------------------------------------------
-@help BF_menu v.1.0
+@help BF_menu v.1.1
 
 A plugin to change the menu. You can use this plugin for any
 project you want, commercial or not, but it is heavily adapted to
@@ -288,7 +288,7 @@ if you need something.
 
 /*:es
 @author FriKitty / CeciDibujera
-@plugindesc Menú personalizado para BF Project. v1.0
+@plugindesc Menú personalizado para BF Project. v1.1
 @filename BF_menu.js
 
 @param dineroIcon
@@ -464,7 +464,7 @@ if you need something.
 @desc Elige el icono a la izquierda de OFF (0 para transparente)
 
 ------------------------------------------------------------------------
-@help BF_menu v.1.0
+@help BF_menu v.1.1
 
 Plugin para cambiar el menú. Puedes usar este plugin para el 
 proyecto que quieras, comercial o no, pero está muy adaptado a mi
@@ -1647,6 +1647,14 @@ Window_BattleEnemy.prototype.numVisibleRows = function() {
     return 1;
 };
 
+// Que refresque la descripción de help window en caso de poner variables ahí que van cambiando en mitad de la batalla
+Window_Selectable.prototype.showHelpWindow = function() {
+    if (this._helpWindow) {
+        this._helpWindow.refresh(); 
+        this._helpWindow.show();
+    }
+};
+
 //PANTALLA DE OPCIONES ----------------------------------------------------------------
 Window_Options.prototype.windowWidth = function() {
     return 550;
@@ -1858,5 +1866,4 @@ Window_TitleCommand.prototype._refreshCursor = function() {
 
     //Quitar toda la parte de windowskin hace que no salga, sólo lo blanco
 };
-
 
